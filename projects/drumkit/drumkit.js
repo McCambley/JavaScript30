@@ -16,6 +16,21 @@ function playSound(e) {
   audio.play();
 
   key.classList.add("playing");
+  console.log("playing");
+}
+
+function touchPlay(e) {
+  let touchID = e.target.attributes["data-key"].value;
+  const audio = document.querySelector(`audio[data-key="${touchID}"`);
+  const key = document.querySelector(`.key[data-key="${touchID}"`);
+
+  if (!audio) return;
+
+  audio.currentTime = 0;
+  audio.play();
+
+  key.classList.add("playing");
 }
 
 window.addEventListener('keydown', playSound)
+window.addEventListener('touchstart', touchPlay)
