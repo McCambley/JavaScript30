@@ -47,6 +47,7 @@
   border-radius: 5px;
   min-width: 72px;
   transition: all .07s ease;
+  touch-action: manipulation;
 }
 
 .key__id {
