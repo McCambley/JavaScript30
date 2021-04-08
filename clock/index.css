@@ -1,0 +1,51 @@
+.page {
+  background-image: url(./images/background.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  min-width: 280px;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.clock {
+  height: 50vmin;
+  width: 50vmin;
+  border: 20px solid #b8b19fbf;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.clockface {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.hand {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 50%;
+  height: 8px;
+  border-radius: 10px;
+  background: #b8b19f;
+  box-shadow: 0 0 1px #b8b19fbf;
+  transform-origin: 100%;
+  transform: translateY(-4px) rotate(90deg);
+  transition: all 0.1s cubic-bezier(1, 3.48, 0.51, -0.09);
+}

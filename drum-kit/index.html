@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="./drumkit.css">
+  <title>Drum Kit</title>
+</head>
+<body class="page">
+
+    <section class="kit-box">
+
+      <!-- Key button -->
+      <div data-key="65" class="key">
+        <p class="key__id">A</p>
+        <p class="key__role">Kick</p>
+      </div>
+      <!-- Key button -->
+      <div data-key="83" class="key">
+        <p class="key__id">S</p>
+        <p class="key__role">Kick</p>
+      </div>
+      <!-- Key button -->
+      <div data-key="68" class="key">
+        <p class="key__id">D</p>
+        <p class="key__role">Snare</p>
+      </div>
+      <!-- Key button -->
+      <div data-key="70" class="key">
+        <p class="key__id">F</p>
+        <p class="key__role">Snare</p>
+      </div>
+      <!-- Key button -->
+      <div data-key="71" class="key">
+        <p class="key__id">G</p>
+        <p class="key__role">Hat</p>
+      </div>
+      <!-- Key button -->
+      <div data-key="72" class="key">
+        <p class="key__id">H</p>
+        <p class="key__role">Hat</p>
+      </div>
+      <!-- Key button -->
+      <div data-key="74" class="key">
+        <p class="key__id">J</p>
+        <p class="key__role">Chop</p>
+      </div>
+      <!-- Key button -->
+      <div data-key="75" class="key">
+        <p class="key__id">K</p>
+        <p class="key__role">Crackle</p>
+      </div>
+      <!-- Key button -->
+      <div data-key="76" class="key">
+        <p class="key__id">L</p>
+        <p class="key__role">Impact</p>
+      </div>
+      <!-- Key button -->
+      <div data-key="186" class="key">
+        <p class="key__id">;</p>
+        <p class="key__role">Impact</p>
+      </div>
+
+    </section>
+
+  <audio data-key="65" src="./sounds/Kick1.wav"></audio>
+  <audio data-key="83" src="./sounds/Kick2.wav"></audio>
+  <audio data-key="68" src="./sounds/snare1.wav"></audio>
+  <audio data-key="70" src="./sounds/Snare2.wav"></audio>
+  <audio data-key="71" src="./sounds/hat1.wav"></audio>
+  <audio data-key="72" src="./sounds/hat2.wav"></audio>
+  <audio data-key="74" src="./sounds/chop1.wav"></audio>
+  <audio data-key="75" src="./sounds/crackle.wav"></audio>
+  <audio data-key="76" src="./sounds/impact.wav"></audio>
+  <audio data-key="186" src="./sounds/impact2.wav"></audio>
+
+  <script src="./drumkit.js"></script>
+</body>
+</html>
