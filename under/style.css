@@ -1,0 +1,67 @@
+@import url(../fonts/fonts.css);
+
+.page {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url(./images/background.jpeg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  padding: 16px;
+  min-width: 300px;
+}
+
+.page:after {
+  content: "";
+  background-color: rgba(0, 0, 0, .4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  font-weight: 900;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 48px;
+  margin-bottom: 16px;
+  z-index: 1;
+  color: white;
+  text-shadow: 0 3px 32px black;
+  opacity: .8;
+}
+
+.subtitle {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  color: white;
+  opacity: .6;
+  text-shadow: 0 3px 24px black;
+
+}
+
+.symbol {
+  font-size: 48px;
+  z-index: 1;
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: inherit;
+  }
+
+}
