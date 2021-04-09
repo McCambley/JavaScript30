@@ -12,6 +12,9 @@
 ### [📍 CSS Variables in Javascript](https://mccambley.github.io/JSPlayground/variables/index.html)
 * After all this time this project explores the use of form inputs to affect CSS variables in real time
 
+### [🏃‍♀️ Array Cardio](https://mccambley.github.io/JSPlayground/JSCardio1/index.html)
+* A tough workout on the track, practicing array functions in the console
+
 ---
 
 ### To-do
