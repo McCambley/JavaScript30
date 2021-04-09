@@ -31,7 +31,7 @@ html {
 
 .page:after {
   content: "";
-  background-color: rgba(126,95,78, .3);
+  background-color: rgba(126,95,78, .8);
   position: absolute;
   top: 0;
   left: 0;
@@ -62,6 +62,7 @@ html {
   /* padding: 20px; */
   background: rgba(48,33,13,.5);
   filter: sepia(var(--sepia));
+  box-shadow: 0 4px 42px rgba(49, 40, 35, 0.7);
 }
 
 .inputs {
