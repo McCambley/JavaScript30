@@ -1,7 +1,7 @@
 @import url(../vendor/normalize.css);
 @import url(../fonts/fonts.css);
 
-@import url(./images/back-button/back-button.css);
+@import url(../images/back-button/back-button.css);
 
 html {
   box-sizing: border-box;

@@ -1,3 +1,6 @@
+@import url(../vendor/normalize.css);
+@import url(../images/back-button/back-button.css);
+
 .page {
   background-image: url(./images/background.jpeg);
   background-size: cover;
