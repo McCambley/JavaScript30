@@ -15,7 +15,7 @@
 ---
 
 ### To-do
+* So many projects!
 * Add a link box in the bottom of the homepage
-* Add a project list in this read me!
 
 ## Based on the [#Javascript30](https://javascript30.com/) course by [Wes Bos](https://twitter.com/wesbos?s=20).
