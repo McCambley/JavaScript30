@@ -2,10 +2,6 @@
 @import url(../fonts/fonts.css);
 @import url(../images/back-button/back-button.css);
 
-/* * {
-  border: 1px solid red;
-} */
-
 .page {
   color: #FFFFFF;
   font-family: 'Martel', serif;
@@ -16,24 +12,10 @@
   padding: 0;
   min-height: 100vh;
   min-width: 280px;
-  /* background-image: url(./images/background.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
   box-sizing: border-box;
   position: relative;
   background-color: #2a2d3f;
 }
-
-/* .page:after {
-  content: "";
-  background-color: rgba(0, 0, 0, .3);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-} */
 
 .panels {
   display: flex;
@@ -54,6 +36,7 @@
   position: relative;
   font-size: 36px;
   user-select: none;
+  cursor: pointer;
 
   /* background */
   background-position: center;
