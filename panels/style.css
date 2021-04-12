@@ -136,22 +136,6 @@
   transform: translateY(0);
 }
 
-/* .panel:hover {
-  flex: 3;
-}
-
-.panel:hover:after {
-  background-color: rgba(38, 10, 3, .2);
-}
-
-.panel:hover .top, .panel:hover .bot {
-  transform: translateY(0);
-}
-
-.panel:hover .mid {
-  font-size: 72px;
-} */
-
 @media (max-width: 768px) {
   .panels {
     flex-direction: column;
