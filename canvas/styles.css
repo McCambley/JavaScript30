@@ -1,0 +1,54 @@
+@import url(../vendor/normalize.css);
+@import url(../fonts/fonts.css);
+
+@import url(../images/back-button/back-button.css);
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-width: 220px;
+  min-height: 100vh;
+  background-color: black;
+  font-family: "RobotoSlab";
+  font-weight: 200;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 36px;
+  background-image: url(./images/background.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+
+  /* variables */
+  --radius: 10px;
+  --sepia: 50%;
+  --border: #675951;
+}
+
+.page:after {
+  content: "";
+  background-color: rgba(216, 160, 104, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+.canvas {
+  box-shadow: 0 0 80px rgba(58, 25, 4, 0.09);
+  border-radius: 10px;
+  z-index: 1;
+  cursor: none;
+}
