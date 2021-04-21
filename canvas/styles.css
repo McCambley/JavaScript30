@@ -71,6 +71,7 @@ html {
   color: white;
   z-index: 4;
   padding: 12px;
+  padding: 0;
 }
 
 .overlay:after {
