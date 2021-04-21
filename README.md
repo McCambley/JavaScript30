@@ -32,6 +32,10 @@
 
 - Another tough workout on the track, practicing more array functions in the console
 
+### [🖼 Canvas](https://mccambley.github.io/JSPlayground/canvas/index.html)
+
+- Creating works of art with Canvas elements, altering stroke size and color with each move of the mouse
+
 ---
 
 ### To-do
