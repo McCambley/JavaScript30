@@ -20,7 +20,6 @@ ctx.globalCompositeOperation = "xor";
 
 function draw(e) {
   if (!isDrawing) return; // Don't do anything when the mouse is up
-  console.log(e);
   ctx.strokeStyle = `hsla(${hue}, 100%, 50%, .15)`;
   ctx.beginPath();
   // start here!
