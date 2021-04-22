@@ -56,7 +56,7 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  height: 100px;
+  height: 76px;
   width: 100%;
   color: #3a39385e;
   cursor: pointer;
@@ -64,6 +64,7 @@
 
 .caption {
   margin: 0;
+  margin-bottom: 16px;
   font-weight: 700;
   filter: drop-shadow(0 0 12px rgba(10, 10, 10, 0.3));
   text-align: center;
@@ -107,6 +108,15 @@
   z-index: 5;
   margin: 0;
   padding: 0 28px;
+}
+
+.screenshot {
+  border-radius: 10px;
+  max-width: 100%;
+  opacity: 0.9;
+  border: 3px solid black;
+  margin-bottom: 32px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
