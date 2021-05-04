@@ -1,0 +1,236 @@
+@import url(../vendor/normalize.css);
+@import url(../fonts/fonts.css);
+
+@import url(../images/back-button/back-button.css);
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-width: 220px;
+  min-height: 100vh;
+  background-color: black;
+  font-family: "RobotoSlab";
+  font-weight: 200;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 36px;
+  /* background-image: url(./images/background.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  color: white;
+}
+
+.page:after {
+  content: "";
+  background-color: rgba(133, 133, 133, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player {
+  z-index: 1;
+  max-width: 100%;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.player__video {
+  max-width: 100%;
+  max-height: 85vmin;
+  border-radius: 50px;
+}
+
+.player__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transform: scale(1);
+  filter: none;
+  transition: all 0.2s ease;
+  line-height: 1;
+  outline: 0;
+  color: white;
+  max-width: 50px;
+}
+
+.player__button:hover {
+  opacity: 1;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
+
+.player__button:active {
+  transform: scale(0.9);
+}
+
+.player__slider {
+  width: 10px;
+  height: 30px;
+}
+
+.player__controls {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(calc(100%));
+  transition: all 0.3s ease;
+  opacity: 0;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+
+.player:hover .player__controls {
+  transform: translateY(-10px);
+  opacity: 1;
+}
+
+.player:hover .player__progress {
+  height: 15px;
+}
+
+.player__controls > * {
+  flex: 1;
+}
+
+.player__progress {
+  flex: 10;
+  position: relative;
+  flex-basis: 100%;
+  display: flex;
+  height: 5px;
+  cursor: ew-resize;
+  background: rgba(255, 255, 255, 0.4);
+  transition: height 0.3s ease;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.player__progress-watched {
+  width: 50%;
+  background-color: rgba(214, 167, 95, 255);
+  flex: 0;
+  flex-basis: 50%;
+}
+
+/* unholy css to style input type="range" <-- written by Wes Bos, modified by yours truly (Jake) */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+  width: 100%;
+  margin: 0 5px;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: rgba(214, 167, 95, 255);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: rgba(190, 186, 187, 255);
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: rgba(190, 186, 187, 255);
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: rgba(214, 167, 95, 255);
+  cursor: pointer;
+}
+
+/* .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./images/stop.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  z-index: 4;
+  padding: 12px;
+  padding: 0;
+}
+
+.overlay:after {
+  content: "";
+  background-color: #362d2499;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 780px) {
+  .overlay {
+    display: flex;
+  }
+  .canvas {
+    display: none;
+  }
+} */
