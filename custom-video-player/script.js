@@ -8,6 +8,8 @@ const progressBar = player.querySelector(".player__progress-watched");
 const toggle = player.querySelector(".toggle");
 const skipButtons = player.querySelectorAll("[data-skip]");
 const ranges = player.querySelectorAll(".player__slider");
+const volumeRange = player.querySelector("#volume-range");
+const playbackRange = player.querySelector("#playback-range");
 const fullscreen = player.querySelector(".fullscreen");
 
 // build functions
@@ -27,9 +29,33 @@ function togglePlayWithKeys(e) {
   } else if (e.key === "ArrowLeft") {
     video.currentTime += -3;
   } else if (e.key === "ArrowUp") {
-    console.log("Volume Up");
+    if (video.volume >= 0.95) {
+      video.volume = 1;
+    } else {
+      video.volume += 0.1;
+    }
+    volumeRange.value = video.volume;
   } else if (e.key === "ArrowDown") {
-    console.log("Volume Down");
+    if (video.volume <= 0.05) {
+      video.volume = 0;
+    } else {
+      video.volume += -0.1;
+    }
+    volumeRange.value = video.volume;
+  } else if (e.key === "f") {
+    if (video.playbackRate >= 1.95) {
+      video.playbackRate = 2;
+    } else {
+      video.playbackRate += 0.1;
+    }
+    playbackRange.value = video.playbackRate;
+  } else if (e.key === "s") {
+    if (video.playbackRate <= 0.55) {
+      video.playbackRate = 0.5;
+    } else {
+      video.playbackRate += -0.1;
+    }
+    playbackRange.value = video.playbackRate;
   }
 }
 
