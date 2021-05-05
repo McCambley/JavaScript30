@@ -18,14 +18,23 @@ function togglePlay() {
   }
 }
 
-function togglePlayWithSpace(e) {
-  if ((e.key = " ")) {
+function togglePlayWithKeys(e) {
+  if (e.key === " ") {
     togglePlay();
+  } else if (e.key === "ArrowRight") {
+    video.currentTime += 5;
+  } else if (e.key === "ArrowLeft") {
+    video.currentTime += -3;
+  } else if (e.key === "ArrowUp") {
+    console.log("Volume Up");
+  } else if (e.key === "ArrowDown") {
+    console.log("Volume Down");
   }
 }
 
 function updateButton() {
   const icon = this.paused ? "▶️" : "⏸";
+  toggle.textContent = icon;
 }
 
 function skip() {
@@ -43,12 +52,11 @@ function handleProgress() {
 
 function scrub(e) {
   const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
-  console.log(mouseDown);
   video.currentTime = scrubTime;
 }
 
 // configure event listeners
-window.addEventListener("keydown", togglePlayWithSpace);
+window.addEventListener("keydown", togglePlayWithKeys);
 video.addEventListener("click", togglePlay);
 video.addEventListener("play", updateButton);
 video.addEventListener("pause", updateButton);
