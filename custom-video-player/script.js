@@ -8,6 +8,7 @@ const progressBar = player.querySelector(".player__progress-watched");
 const toggle = player.querySelector(".toggle");
 const skipButtons = player.querySelectorAll("[data-skip]");
 const ranges = player.querySelectorAll(".player__slider");
+const fullscreen = player.querySelector(".fullscreen");
 
 // build functions
 function togglePlay() {
@@ -55,6 +56,22 @@ function scrub(e) {
   video.currentTime = scrubTime;
 }
 
+function enterFullScreen() {
+  let fullscreenStatus = false;
+  if (fullscreen.classList.contains("fullscreen_fullscreen")) {
+    fullscreenStatus = true;
+  }
+  if (!fullscreenStatus) {
+    player.classList.add("player_fullscreen");
+    video.classList.add("player__video_fullscreen");
+    fullscreen.classList.add("fullscreen_fullscreen");
+  } else {
+    player.classList.remove("player_fullscreen");
+    video.classList.remove("player__video_fullscreen");
+    fullscreen.classList.remove("fullscreen_fullscreen");
+  }
+}
+
 // configure event listeners
 window.addEventListener("keydown", togglePlayWithKeys);
 video.addEventListener("click", togglePlay);
@@ -74,3 +91,5 @@ progress.addEventListener("mousemove", (e) => {
 let mouseDown = false;
 progress.addEventListener("mousedown", () => (mouseDown = true));
 progress.addEventListener("mouseup", () => (mouseDown = false));
+
+fullscreen.addEventListener("click", enterFullScreen);

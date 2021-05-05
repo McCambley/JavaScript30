@@ -126,7 +126,7 @@ html {
   flex-basis: 100%;
   display: flex;
   height: 5px;
-  cursor: ew-resize;
+  cursor: pointer;
   background: rgba(255, 255, 255, 0.4);
   transition: height 0.3s ease;
   border-radius: 50px;
@@ -135,10 +135,45 @@ html {
 
 .player__progress-watched {
   width: 50%;
-  background-color: rgba(214, 167, 95, 255);
+  background-color: rgba(214, 167, 95, 1);
   flex: 0;
-  flex-basis: 50%;
+  flex-basis: 5%;
 }
+
+/* fullscreen classes */
+
+.fullscreen {
+  background-image: url(./images/expand.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(0.8);
+}
+
+.fullscreen_fullscreen {
+  background-image: url(./images/minimize.svg);
+}
+
+.player_fullscreen {
+  position: absolute;
+  border-radius: 0;
+  width: 100vw;
+}
+
+.player__video_fullscreen {
+  width: 100%;
+  max-height: 100vmin;
+}
+
+/* scroll will eventually update flex-basis on mousemove */
+
+/* .player__progress-scroll {
+  width: 50%;
+  background-color: rgba(214, 166, 95, 0.4);
+  background-color: red;
+  flex: 0;
+  flex-basis: 5%;
+} */
 
 /* unholy css to style input type="range" <-- written by Wes Bos, modified by yours truly (Jake) */
 
