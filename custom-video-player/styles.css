@@ -15,7 +15,7 @@ html {
   align-items: center;
   position: relative;
   width: 100%;
-  min-width: 220px;
+  min-width: 300px;
   min-height: 100vh;
   background-color: black;
   font-family: "RobotoSlab";
@@ -51,12 +51,13 @@ html {
   position: relative;
   overflow: hidden;
   border-radius: 50px;
+  display: flex;
 }
 
 .player__video {
   max-width: 100%;
   max-height: 85vmin;
-  border-radius: 50px;
+  /* border-radius: 50px; */
 }
 
 .player__button {
@@ -98,16 +99,16 @@ html {
   position: absolute;
   bottom: 0;
   width: 100%;
-  transform: translateY(calc(100%));
+  transform: translateY(calc(100% - 15px));
   transition: all 0.3s ease;
-  opacity: 0;
+  opacity: 0.8;
   padding: 10px 20px;
   box-sizing: border-box;
   border-radius: 50px;
 }
 
 .player:hover .player__controls {
-  transform: translateY(-10px);
+  transform: translateY(0px);
   opacity: 1;
 }
 
@@ -234,3 +235,21 @@ input[type="range"]::-moz-range-thumb {
     display: none;
   }
 } */
+
+@media (max-width: 780px) {
+  .page {
+    padding: 10px;
+  }
+
+  .player {
+    border-radius: 10px;
+  }
+
+  .player__video {
+    border-radius: 10px;
+  }
+
+  .player__controls {
+    transform: translateY(calc(100% - 22px));
+  }
+}
