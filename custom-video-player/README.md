@@ -14,6 +14,4 @@ This one's cool, I like this one. We removed the default controls and used some 
 
 - Adjust shadow progress bar on mousemove so that you may see where you'll fast forward to
 
-- Finally, gotta add a functioning full screen button.
-
 ### [View the project live here!](https://mccambley.github.io/JSPlayground/custom-video-player/)

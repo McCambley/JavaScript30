@@ -36,6 +36,18 @@
 
 - Creating works of art with Canvas elements, altering stroke size and color with each move of the mouse
 
+### [🔦 Dev Tools Discover](https://mccambley.github.io/JSPlayground/inspect-tools/)
+
+- Learning more ins and outs of the browser developer tools feature
+
+### [☑️ Checkboxes](https://mccambley.github.io/JSPlayground/checkboxes/)
+
+- Building a list of checkbox inputs that allows users to select multiple options while holding down shift, a common feature throughout the web.
+
+### [📽 Custom Video Player](https://mccambley.github.io/JSPlayground/custom-video-player/)
+
+- Creating custom video controls to mimic and build upon the default browser options. This project went a few steps beyond what Wes Bos had displayed in his own project in order to add functionality commonly seen in todays most popular video players.
+
 ---
 
 ### To-do
