@@ -5,6 +5,7 @@ const video = player.querySelector(".player__video");
 const controls = player.querySelector(".player__controls");
 const progress = player.querySelector(".player__progress");
 const progressBar = player.querySelector(".player__progress-watched");
+const ghostProgressBar = player.querySelector(".player__progress-scroll");
 const toggle = player.querySelector(".toggle");
 const skipButtons = player.querySelectorAll("[data-skip]");
 const ranges = player.querySelectorAll(".player__slider");
@@ -78,7 +79,8 @@ function handleProgress() {
 }
 
 function scrub(e) {
-  const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+  const scrubTime = (e.layerX / progress.offsetWidth) * video.duration;
+  ghostProgressBar.style.flexBasis = 0;
   video.currentTime = scrubTime;
 }
 
@@ -96,6 +98,14 @@ function enterFullScreen() {
     video.classList.remove("player__video_fullscreen");
     fullscreen.classList.remove("fullscreen_fullscreen");
   }
+}
+
+function showGhost(e) {
+  ghostProgressBar.style.width = `${e.layerX}px`;
+}
+
+function hideGhost(e) {
+  ghostProgressBar.style.width = 0;
 }
 
 // configure event listeners
@@ -119,3 +129,8 @@ progress.addEventListener("mousedown", () => (mouseDown = true));
 progress.addEventListener("mouseup", () => (mouseDown = false));
 
 fullscreen.addEventListener("click", enterFullScreen);
+
+// scrub planing function
+// progress.addEventListener("mousemove", planScrub);
+progress.addEventListener("mousemove", showGhost);
+progress.addEventListener("mouseleave", hideGhost);

@@ -137,7 +137,8 @@ html {
   width: 50%;
   background-color: rgba(214, 167, 95, 1);
   flex: 0;
-  flex-basis: 5%;
+  flex-basis: 0%;
+  z-index: 2;
 }
 
 /* fullscreen classes */
@@ -167,13 +168,17 @@ html {
 
 /* scroll will eventually update flex-basis on mousemove */
 
-/* .player__progress-scroll {
-  width: 50%;
+.player__progress-scroll {
+  width: 0px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
   background-color: rgba(214, 166, 95, 0.4);
-  background-color: red;
-  flex: 0;
-  flex-basis: 5%;
-} */
+  /* flex: 0;
+  flex-basis: 0%; */
+}
 
 /* unholy css to style input type="range" <-- written by Wes Bos, modified by yours truly (Jake) */
 
