@@ -69,8 +69,9 @@ function skip() {
   video.currentTime += parseFloat(this.dataset.skip);
 }
 
-function handleRangeUpdate() {
-  video[this.name] = this.value;
+function handleRangeUpdate(e) {
+  console.log(this.value);
+  video[e.target.name] = e.target.value;
 }
 
 function handleProgress() {
@@ -115,11 +116,33 @@ video.addEventListener("play", updateButton);
 video.addEventListener("pause", updateButton);
 video.addEventListener("timeupdate", handleProgress);
 toggle.addEventListener("click", togglePlay);
+
 skipButtons.forEach((button) => {
   button.addEventListener("click", skip);
 });
-ranges.forEach((range) => range.addEventListener("change", handleRangeUpdate));
+
+ranges.forEach((range) =>
+  range.addEventListener("mousemove", (e) => {
+    mouseDown && handleRangeUpdate(e);
+  })
+);
+
+ranges.forEach((range) =>
+  range.addEventListener("mousedown", () => {
+    mouseDown = true;
+    console.log(mouseDown);
+  })
+);
+
+ranges.forEach((range) =>
+  range.addEventListener("mouseup", () => {
+    mouseDown = false;
+    console.log(mouseDown);
+  })
+);
+
 progress.addEventListener("click", scrub);
+
 progress.addEventListener("mousemove", (e) => {
   mouseDown && scrub(e);
 });
@@ -130,7 +153,5 @@ progress.addEventListener("mouseup", () => (mouseDown = false));
 
 fullscreen.addEventListener("click", enterFullScreen);
 
-// scrub planing function
-// progress.addEventListener("mousemove", planScrub);
 progress.addEventListener("mousemove", showGhost);
 progress.addEventListener("mouseleave", hideGhost);
