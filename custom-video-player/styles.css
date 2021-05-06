@@ -44,6 +44,42 @@ html {
   align-items: center;
 }
 
+.header {
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  padding: 14px 0;
+  box-shadow: 0 5px 24px transparent;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  background-color: rgba(214, 167, 95, 1);
+}
+
+.header_display {
+  transform: translateY(0);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+
+.header__select {
+  border: 3px solid transparent;
+  border-radius: 0px;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.header__select:hover {
+  opacity: 1;
+}
+
 .player {
   z-index: 1;
   max-width: 100%;

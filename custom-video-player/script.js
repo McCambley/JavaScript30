@@ -1,5 +1,8 @@
 console.info("Hello, World!");
 // get items
+const page = document.querySelector(".page");
+const header = document.querySelector(".header");
+const select = header.querySelector(".header__select");
 const player = document.querySelector(".player");
 const video = player.querySelector(".player__video");
 const controls = player.querySelector(".player__controls");
@@ -20,6 +23,7 @@ function togglePlay() {
   } else {
     video.pause();
   }
+  toggleHeaderOnPlay();
 }
 
 function togglePlayWithKeys(e) {
@@ -109,8 +113,34 @@ function hideGhost(e) {
   ghostProgressBar.style.width = 0;
 }
 
+function showHeader() {
+  header.classList.add("header_display");
+}
+
+function hideHeader() {
+  if (!video.paused) {
+    header.classList.remove("header_display");
+  }
+}
+
+function toggleHeaderOnPlay() {
+  if (video.paused) {
+    showHeader();
+  } else {
+    hideHeader();
+  }
+}
+
+function loadNewVideo() {
+  video.src = this.value;
+  video.load();
+}
+
 // configure event listeners
 window.addEventListener("keydown", togglePlayWithKeys);
+select.addEventListener("change", loadNewVideo);
+// video.addEventListener("mouseover", showHeader);
+// video.addEventListener("mouseout", hideHeader);
 video.addEventListener("click", togglePlay);
 video.addEventListener("play", updateButton);
 video.addEventListener("pause", updateButton);
