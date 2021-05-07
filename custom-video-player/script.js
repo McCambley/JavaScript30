@@ -134,6 +134,8 @@ function toggleHeaderOnPlay() {
 function loadNewVideo() {
   video.src = this.value;
   video.load();
+  video.playbackRate = playbackRange.value;
+  video.volume = volumeRange.value;
 }
 
 // configure event listeners
