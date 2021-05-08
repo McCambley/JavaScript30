@@ -15,14 +15,14 @@ html {
   align-items: center;
   position: relative;
   width: 100%;
-  min-width: 220px;
+  min-width: 275px;
   min-height: 100vh;
   background-color: black;
   font-family: "RobotoSlab";
   font-weight: 200;
   box-sizing: border-box;
   margin: 0;
-  padding: 36px;
+  padding: 16px;
   background-image: url(./images/background.jpeg);
   background-position: center;
   background-size: cover;
@@ -47,7 +47,7 @@ html {
   justify-content: center;
   align-items: center;
   text-shadow: 0 0 5px black;
-  padding: 36px 148px;
+  padding: 28px 148px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50px;
   z-index: 1;
@@ -55,10 +55,29 @@ html {
 
 .title {
   margin: 0;
+  margin-bottom: 8px;
+  text-align: center;
 }
 
 .subtitle {
   margin: 0;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.hint {
+  margin: 0;
+  transform: rotate(180deg);
+  text-align: center;
+  text-shadow: none;
+  color: black;
+  opacity: 0.1;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.hint:hover {
+  opacity: 0.8;
 }
 
 /* .overlay {
@@ -99,3 +118,18 @@ html {
     display: none;
   }
 } */
+
+@media (max-width: 780px) {
+  .text-container {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .title {
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    margin-bottom: 16px;
+  }
+}
