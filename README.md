@@ -48,6 +48,10 @@
 
 - Creating custom video controls to mimic and build upon the default browser options. This project went a few steps beyond what Wes Bos had displayed in his own project in order to add functionality commonly seen in todays most popular video players.
 
+### [🔗 Key Sequence Detector](https://mccambley.github.io/JSPlayground/sequence/)
+
+- Listen for a sequence of keys and alert the user if they type the secret code. This project uses the same functionality as the popular "Konami Code" easter egg featured on many website homepages.
+
 ---
 
 ### To-do
