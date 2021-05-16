@@ -71,7 +71,7 @@ html {
   text-align: center;
   width: 100%;
   margin: 0;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
 }
 
 .plates {
@@ -84,12 +84,45 @@ html {
   width: 100%;
 }
 
-.plate {
+.loading {
   margin: 0;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
   font-weight: 700;
   width: 100%;
   text-align: center;
+}
+
+.plate {
+  margin: 0;
+  /* text-shadow: 0 0 3px rgba(0, 0, 0, 0.6); */
+  font-weight: 700;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  line-height: 36px;
+  padding-left: 8px;
+  color: rgba(65, 65, 65, 1);
+  display: flex;
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  cursor: pointer;
+  min-width: 100%;
+}
+
+.label::before {
+  content: "⬜️";
+  text-shadow: 0 0px 8px rgb(0, 0, 0, 0.3);
+  margin-right: 8px;
+}
+
+.checkbox:checked + .label::before {
+  content: "☑️";
+  text-shadow: none;
+  margin-right: 8px;
 }
 
 .item-input {
@@ -97,8 +130,8 @@ html {
   border: 2px solid #fff;
   border-radius: 4px;
   padding: 4px;
-  /* text-shadow: 0 0 3px rgba(0, 0, 0, 0.4); */
-  color: #fff;
+  /* text-shadow: 0 0 3px rgba(0, 0, 0, 0.6); */
+  color: rgb(133, 133, 133);
 }
 
 .submit-button {
@@ -108,7 +141,7 @@ html {
   cursor: pointer;
   padding: 4px;
   color: #fff;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
 }
 
 /* .overlay {
