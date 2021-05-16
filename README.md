@@ -52,6 +52,14 @@
 
 - Listen for a sequence of keys and alert the user if they type the secret code. This project uses the same functionality as the popular "Konami Code" easter egg featured on many website homepages.
 
+### [🔐 Local Storage and Event Delegations](https://mccambley.github.io/JSPlayground/local-storage/)
+
+- Create a list of menu items that will remain in their added and checked/unchecked state on page refresh. Also, use event delegation to target specific menu items on click in order to set certain Local Storage variable values.
+
+- What's next is to implement a clear button that will reset the menu, the local storage, and the innerHTML of the plates list
+
+- This project will be especially useful in maintaining a "dark mode" state on page refresh on a separate project, my personal portfolio.
+
 ---
 
 ### To-do

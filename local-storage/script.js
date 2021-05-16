@@ -43,6 +43,12 @@ function populateList(storedItems = [], platesList) {
     `;
     })
     .join("");
+  // if (storedItems === []) {
+  //   console.log("here");
+  //   itemsList.innerHTML = `
+  //     <li class="loading">Loading Tapas...</li>
+  //     `;
+  // }
 }
 
 populateList(items, itemsList);
