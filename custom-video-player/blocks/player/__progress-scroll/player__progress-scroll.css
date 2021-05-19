@@ -1,0 +1,9 @@
+.player__progress-scroll {
+  width: 0px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(214, 166, 95, 0.4);
+}

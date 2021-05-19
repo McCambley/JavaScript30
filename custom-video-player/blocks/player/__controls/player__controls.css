@@ -1,0 +1,28 @@
+.player__controls {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(calc(100% - 15px));
+  transition: all 0.3s ease;
+  opacity: 0.8;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+
+.player:hover .player__controls {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.player__controls > * {
+  flex: 1;
+}
+
+@media (max-width: 780px) {
+  .player__controls {
+    transform: translateY(calc(100% - 22px));
+  }
+}

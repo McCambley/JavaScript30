@@ -1,0 +1,36 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-width: 300px;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 1);
+  font-family: "RobotoSlab";
+  font-weight: 200;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 36px;
+  color: white;
+}
+
+.page:after {
+  content: "";
+  background-color: rgba(214, 166, 95, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 780px) {
+  .page {
+    padding: 10px;
+  }
+}

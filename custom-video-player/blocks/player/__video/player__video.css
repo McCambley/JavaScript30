@@ -1,0 +1,11 @@
+.player__video {
+  max-width: 100%;
+  max-height: 85vmin;
+  /* border-radius: 50px; */
+}
+
+@media (max-width: 780px) {
+  .player__video {
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,7 @@
+.player__progress-watched {
+  width: 50%;
+  background-color: rgba(214, 167, 95, 1);
+  flex: 0;
+  flex-basis: 0%;
+  z-index: 2;
+}

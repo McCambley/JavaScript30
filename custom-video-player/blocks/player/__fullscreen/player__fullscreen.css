@@ -1,0 +1,7 @@
+.player__fullscreen {
+  background-image: url(../../../images/expand.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(0.8);
+}

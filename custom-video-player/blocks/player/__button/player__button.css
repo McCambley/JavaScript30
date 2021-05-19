@@ -1,0 +1,27 @@
+.player__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transform: scale(1);
+  filter: none;
+  transition: all 0.2s ease;
+  line-height: 1;
+  outline: 0;
+  color: white;
+  max-width: 50px;
+}
+
+.player__button:hover {
+  opacity: 1;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
+
+.player__button:active {
+  transform: scale(0.9);
+}

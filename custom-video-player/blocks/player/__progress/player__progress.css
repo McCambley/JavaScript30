@@ -1,0 +1,16 @@
+.player__progress {
+  flex: 10;
+  position: relative;
+  flex-basis: 100%;
+  display: flex;
+  height: 5px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.4);
+  transition: height 0.3s ease;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.player:hover .player__progress {
+  height: 15px;
+}

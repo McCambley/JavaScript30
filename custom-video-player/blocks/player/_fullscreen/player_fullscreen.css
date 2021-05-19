@@ -1,0 +1,5 @@
+.player_fullscreen {
+  position: absolute;
+  border-radius: 0;
+  width: 100vw;
+}

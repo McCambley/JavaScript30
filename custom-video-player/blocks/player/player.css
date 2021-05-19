@@ -1,0 +1,28 @@
+@import url(./__button/player__button.css);
+@import url(./__controls/player__controls.css);
+@import url(./__fullscreen/player__fullscreen.css);
+@import url(./__progress-scroll/player__progress-scroll.css);
+@import url(./__progress-watched/player__progress-watched.css);
+@import url(./__progress/player__progress.css);
+@import url(./__slider/player__slider.css);
+@import url(./__video/player__video.css);
+
+/* modifiers */
+@import url(./__video/_fullscreen/player__video_fullscreen.css);
+@import url(./__fullscreen/_fullscreen/player__fullscreen_fullscreen.css);
+
+.player {
+  z-index: 1;
+  max-width: 100%;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+}
+
+@media (max-width: 780px) {
+  .player {
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,13 @@
+.header__select {
+  border: 3px solid transparent;
+  border-radius: 0px;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.header__select:hover {
+  opacity: 1;
+}
