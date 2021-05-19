@@ -1,4 +1,3 @@
-console.info("Hello, World!");
 // get items
 const page = document.querySelector(".page");
 const header = document.querySelector(".header");
@@ -14,7 +13,7 @@ const skipButtons = player.querySelectorAll("[data-skip]");
 const ranges = player.querySelectorAll(".player__slider");
 const volumeRange = player.querySelector("#volume-range");
 const playbackRange = player.querySelector("#playback-range");
-const fullscreen = player.querySelector(".fullscreen");
+const fullscreen = player.querySelector(".player__fullscreen");
 
 // build functions
 function togglePlay() {
@@ -74,7 +73,6 @@ function skip() {
 }
 
 function handleRangeUpdate(e) {
-  console.log(this.value);
   video[e.target.name] = e.target.value;
 }
 
@@ -91,17 +89,17 @@ function scrub(e) {
 
 function enterFullScreen() {
   let fullscreenStatus = false;
-  if (fullscreen.classList.contains("fullscreen_fullscreen")) {
+  if (fullscreen.classList.contains("player__fullscreen_fullscreen")) {
     fullscreenStatus = true;
   }
   if (!fullscreenStatus) {
     player.classList.add("player_fullscreen");
     video.classList.add("player__video_fullscreen");
-    fullscreen.classList.add("fullscreen_fullscreen");
+    fullscreen.classList.add("player__fullscreen_fullscreen");
   } else {
     player.classList.remove("player_fullscreen");
     video.classList.remove("player__video_fullscreen");
-    fullscreen.classList.remove("fullscreen_fullscreen");
+    fullscreen.classList.remove("player__fullscreen_fullscreen");
   }
 }
 
@@ -141,8 +139,6 @@ function loadNewVideo() {
 // configure event listeners
 window.addEventListener("keydown", togglePlayWithKeys);
 select.addEventListener("change", loadNewVideo);
-// video.addEventListener("mouseover", showHeader);
-// video.addEventListener("mouseout", hideHeader);
 video.addEventListener("click", togglePlay);
 video.addEventListener("play", updateButton);
 video.addEventListener("pause", updateButton);
@@ -154,6 +150,12 @@ skipButtons.forEach((button) => {
 });
 
 ranges.forEach((range) =>
+  range.addEventListener("click", (e) => {
+    handleRangeUpdate(e);
+  })
+);
+
+ranges.forEach((range) =>
   range.addEventListener("mousemove", (e) => {
     mouseDown && handleRangeUpdate(e);
   })
@@ -162,14 +164,12 @@ ranges.forEach((range) =>
 ranges.forEach((range) =>
   range.addEventListener("mousedown", () => {
     mouseDown = true;
-    console.log(mouseDown);
   })
 );
 
 ranges.forEach((range) =>
   range.addEventListener("mouseup", () => {
     mouseDown = false;
-    console.log(mouseDown);
   })
 );
 
