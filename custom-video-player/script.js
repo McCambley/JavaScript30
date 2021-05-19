@@ -25,6 +25,7 @@ function togglePlay() {
   toggleHeaderOnPlay();
 }
 
+// configure keyboard shortcuts
 function togglePlayWithKeys(e) {
   if (e.key === " ") {
     togglePlay();
@@ -68,6 +69,7 @@ function updateButton() {
   toggle.textContent = icon;
 }
 
+// use data-key values to increment time of playback
 function skip() {
   video.currentTime += parseFloat(this.dataset.skip);
 }
