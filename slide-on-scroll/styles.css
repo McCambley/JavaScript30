@@ -73,7 +73,7 @@ html {
   filter: grayscale(0);
 }
 
-.zoomed {
+/* .zoomed {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -81,7 +81,7 @@ html {
   width: 75vw;
   opacity: 1;
   z-index: 2;
-}
+} */
 
 /* .overlay {
   position: absolute;
@@ -141,7 +141,19 @@ html {
   .container {
     gap: 12px;
   }
+
+  .image {
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    opacity: 1;
+    cursor: zoom-in;
+    filter: grayscale(0);
+  }
+
   .image:hover {
-    transform: scale(1.01);
+    transform: none;
+    box-shadow: none;
+    opacity: 1;
   }
 }
