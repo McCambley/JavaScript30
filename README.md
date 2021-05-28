@@ -52,6 +52,10 @@
 
 - Listen for a sequence of keys and alert the user if they type the secret code. This project uses the same functionality as the popular "Konami Code" easter egg featured on many website homepages.
 
+### [🎚 Slide on Scroll](https://mccambley.github.io/JSPlayground/slide-on-scroll/)
+
+- Listen for scroll events and display photos only when they appear in the window. This project features a popup that lets users view an expanded version of each photo as well.
+
 ### [🔐 Local Storage and Event Delegations](https://mccambley.github.io/JSPlayground/local-storage/)
 
 - Create a list of menu items that will remain in their added and checked/unchecked state on page refresh. Also, use event delegation to target specific menu items on click in order to set certain Local Storage variable values.
