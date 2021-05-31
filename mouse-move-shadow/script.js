@@ -20,10 +20,10 @@ function shadow(evt) {
   const yWalk = Math.round((y / height) * walk - walk / 2);
 
   text.style.textShadow = `
-  ${xWalk}px ${yWalk}px 0 rgba(0, 255, 255, 0.3),
-  ${xWalk * -1}px ${yWalk}px 0 rgba(255, 0, 255, 0.3),
-  ${xWalk}px ${yWalk * -1}px 0 rgba(255, 255, 0, 0.3),
-  ${xWalk * -1}px ${yWalk * -1}px 0 rgba(0, 255, 0, 0.3)
+  ${xWalk * -1}px ${yWalk * -1}px 0 rgba(0, 255, 255, 0.3),
+  ${xWalk * -1.5}px ${yWalk * -1.5}px 0 rgba(255, 0, 255, 0.3),
+  ${xWalk * -2}px ${yWalk * -2}px 0 rgba(255, 255, 0, 0.3),
+  ${xWalk * -2.5}px ${yWalk * -2.5}px 0 rgba(0, 255, 0, 0.3)
   `;
 }
 
