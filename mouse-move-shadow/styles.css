@@ -41,6 +41,12 @@ html {
   width: 100%;
 }
 
+.text {
+  font-weight: 900;
+  font-size: 96px;
+  text-shadow: 16px 12px 0 rgba(255, 255, 255, 0.5);
+}
+
 /* .overlay {
   position: absolute;
   top: 0;
