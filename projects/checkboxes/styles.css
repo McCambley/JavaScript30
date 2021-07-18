@@ -1,0 +1,72 @@
+@import url(../../vendor/normalize.css);
+@import url(../../fonts/fonts.css);
+
+@import url(../../images/back-button/back-button.css);
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-width: 220px;
+  min-height: 100vh;
+  background-color: black;
+  font-family: 'RobotoSlab';
+  font-weight: 200;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 36px;
+  background-image: url(./images/background.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #0c0907;
+}
+
+.page:after {
+  content: '';
+  background-color: rgba(216, 160, 104, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+.list {
+  list-style: none;
+  box-shadow: 0 0 16px rgba(90, 68, 45, 0.9);
+  border-radius: 10px;
+  margin: 0;
+  padding: 4px;
+  width: 200px;
+  z-index: 1;
+}
+
+.list__item {
+  border: 1px solid rgba(72, 56, 39, 0.3);
+  border-radius: 5px;
+  margin: 0;
+  margin-bottom: 4px;
+  padding: 4px 8px;
+}
+
+.list__label {
+  font-weight: 700;
+  padding-left: 4px;
+}
+
+.list__input:checked + .list__label {
+  text-decoration: line-through;
+  opacity: 0.5;
+  font-weight: 400;
+  font-style: italic;
+}

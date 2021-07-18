@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="./images/favicons/site.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>CSS Variables with JS</title>
+  </head>
+  <body class="page">
+    <section class="content">
+      <img src="./images/puppy.jpeg" alt="Puppydog" class="image" />
+      <div class="inputs">
+        <div class="input-wrapper">
+          <label for="radius" class="input-label">Roundness</label>
+          <input type="range" name="radius" min="10" max="215" value="10" data-sizing="px" class="input" />
+        </div>
+        <div class="input-wrapper">
+          <label for="border" class="input-label">Border</label>
+          <input type="color" name="border" value="#675951" class="input" />
+        </div>
+        <div class="input-wrapper">
+          <label for="sepia" class="input-label">Filter</label>
+          <input type="range" name="sepia" min="40" max="100" value="50" data-sizing="%" class="input" />
+        </div>
+      </div>
+    </section>
+    <a href="../../" class="back-button" aria-label="Back button"></a>
+    <style></style>
+    <script src="./script.js"></script>
+  </body>
+</html>
