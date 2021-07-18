@@ -22,7 +22,7 @@ html {
   font-weight: 200;
   box-sizing: border-box;
   margin: 0;
-  padding: 36px;
+  padding: 48px 12px;
   background-image: url(./images/background.jpeg);
   background-position: center;
   background-size: cover;
@@ -33,12 +33,47 @@ html {
 
 .page:after {
   content: '';
-  background-color: rgba(216, 160, 104, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 0;
   left: 0;
   min-height: 100%;
   width: 100%;
+}
+
+.heading {
+  z-index: 1;
+  margin: 0;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0;
+  margin-bottom: 12px;
+  z-index: 1;
+  font-size: 16px;
+  text-align: center;
+}
+
+.videos {
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  background-color: white;
+  padding: 24px;
+  border-radius: 10px;
+}
+
+.video {
+  color: gray;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.video:last-child {
+  margin-bottom: 0;
 }
 
 /* .overlay {
