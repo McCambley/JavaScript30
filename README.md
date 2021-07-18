@@ -71,4 +71,6 @@
 - So many projects!
 - Add a link box in the bottom of the homepage
 
-## Based on the [#Javascript30](https://javascript30.com/) course by [Wes Bos](https://twitter.com/wesbos?s=20). Find his version of the course [here](https://github.com/McCambley/JavaScript30)
+## Based on the [#Javascript30](https://javascript30.com/) course by [Wes Bos](https://twitter.com/wesbos?s=20).
+
+- Find his version of the course [here](https://github.com/McCambley/JavaScript30).
