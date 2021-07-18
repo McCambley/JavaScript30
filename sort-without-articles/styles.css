@@ -59,27 +59,49 @@ html {
   min-height: 50px;
   min-width: 75%;
   color: #3d3d3d;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
+  padding: 0px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 8px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.heading {
+  z-index: 1;
+  margin: 0;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
 .band {
   font-weight: 100;
+  padding: 4px 16px;
+  text-align: center;
+  border: 2px solid rgba(128, 128, 128, 0.103);
+  border-radius: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.band:last-child {
+  margin-bottom: 0;
 }
 
 .band:hover {
-  font-weight: 900;
+  /* font-weight: 900; */
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* .overlay {
@@ -120,3 +142,9 @@ html {
     display: none;
   }
 } */
+
+@media (max-width: 476px) {
+  .page {
+    padding: 16px;
+  }
+}
