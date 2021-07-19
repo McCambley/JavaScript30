@@ -26,7 +26,7 @@ function paintToCanvas() {
 
   setInterval(() => {
     ctx.drawImage(video, 0, 0, width, height);
-  }, 100);
+  }, 50);
 }
 
 function takePhoto() {
