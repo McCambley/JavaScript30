@@ -38,9 +38,11 @@ function takePhoto() {
   // take the data from the canvas
   const data = canvas.toDataURL('image/jpeg');
   const link = document.createElement('a');
+  strip.innerHTML = '';
   link.href = data;
   link.setAttribute('download', 'handsome');
   link.textContent = 'Download Image';
+  link.classList.add('link');
   strip.insertBefore(link, strip.firstChild);
   // console.log(data);
 }
