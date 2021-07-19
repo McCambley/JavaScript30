@@ -11,27 +11,38 @@
     <link rel="stylesheet" href="./styles.css" />
     <title>Webcam Fun</title>
   </head>
-
   <body class="page">
     <div class="photobooth">
       <div class="controls">
-        <button onClick="takePhoto()">Take Photo</button>
         <div class="rgb">
-          <label for="rmin">Red Min:</label>
-          <input type="range" min="0" max="255" name="rmin" />
-          <label for="rmax">Red Max:</label>
-          <input type="range" min="0" max="255" name="rmax" />
+          <div class="wrapper">
+            <label for="rmin">Red Min:</label>
+            <input type="range" min="0" max="255" name="rmin" />
+          </div>
+          <div class="wrapper">
+            <label for="rmax">Red Max:</label>
+            <input type="range" min="0" max="255" name="rmax" />
+          </div>
           <!-- <br /> -->
-          <label for="gmin">Green Min:</label>
-          <input type="range" min="0" max="255" name="gmin" />
-          <label for="gmax">Green Max:</label>
-          <input type="range" min="0" max="255" name="gmax" />
-          <!-- <br /> -->
-          <label for="bmin">Blue Min:</label>
-          <input type="range" min="0" max="255" name="bmin" />
-          <label for="bmax">Blue Max:</label>
-          <input type="range" min="0" max="255" name="bmax" />
+          <div class="wrapper">
+            <label for="gmin">Green Min:</label>
+            <input type="range" min="0" max="255" name="gmin" />
+          </div>
+          <div class="wrapper">
+            <label for="gmax">Green Max:</label>
+            <input type="range" min="0" max="255" name="gmax" />
+          </div>
+          <div class="wrapper">
+            <!-- <br /> -->
+            <label for="bmin">Blue Min:</label>
+            <input type="range" min="0" max="255" name="bmin" />
+          </div>
+          <div class="wrapper">
+            <label for="bmax">Blue Max:</label>
+            <input type="range" min="0" max="255" name="bmax" />
+          </div>
         </div>
+        <button class="button">Take Photo</button>
       </div>
 
       <canvas class="photo"></canvas>
