@@ -31,6 +31,10 @@ html {
   color: white;
 }
 
+.page_shift {
+  justify-content: center;
+}
+
 .page:after {
   content: '';
   background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 6) 100%);
@@ -67,9 +71,13 @@ html {
 }
 
 .rgb {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 12px;
+}
+
+.rgb_show {
+  display: grid;
 }
 
 .button {
@@ -131,8 +139,10 @@ html {
 
 @media (max-width: 480px) {
   .page {
-    justify-content: flex-start;
     padding: 8px;
+  }
+  .page_shift {
+    justify-content: flex-start;
   }
   .rgb {
     grid-template-columns: repeat(1, 1fr);

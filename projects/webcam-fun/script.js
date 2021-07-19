@@ -1,5 +1,3 @@
-console.info('Hello, World!');
-
 const video = document.querySelector('.player');
 const canvas = document.querySelector('.photo');
 const ctx = canvas.getContext('2d');
@@ -7,6 +5,8 @@ const strip = document.querySelector('.strip');
 const snap = document.querySelector('.snap');
 const button = document.querySelector('.button');
 const select = document.querySelector('.select');
+const rgbContainer = document.querySelector('.rgb');
+const page = document.querySelector('.page');
 
 function getVideo() {
   navigator.mediaDevices
@@ -18,20 +18,35 @@ function getVideo() {
     .catch(err => console.error(err));
 }
 
+function toggleHiddenElements(bool) {
+  if (bool) {
+    rgbContainer.classList.add('rgb_show');
+    page.classList.add('page_shift');
+  } else {
+    rgbContainer.classList.remove('rgb_show');
+    page.classList.remove('page_shift');
+  }
+}
+
 function selectFilter(inputValue, pixels) {
   if (inputValue === 'rgb') {
     ctx.globalAlpha = 1;
+    toggleHiddenElements(false);
     return rbgSplit(pixels);
   } else if (inputValue === 'green') {
+    toggleHiddenElements(true);
     ctx.globalAlpha = 1;
     return greenScreen(pixels);
   } else if (inputValue === 'red') {
+    toggleHiddenElements(false);
     ctx.globalAlpha = 1;
     return redEffect(pixels);
   } else if (inputValue === 'ghost') {
+    toggleHiddenElements(false);
     ctx.globalAlpha = 0.05;
     return pixels;
   } else {
+    toggleHiddenElements(false);
     ctx.globalAlpha = 1;
     return pixels;
   }
