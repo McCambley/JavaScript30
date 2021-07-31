@@ -57,7 +57,6 @@ function paintToCanvas() {
   const height = video.videoHeight;
   canvas.width = width;
   canvas.height = height;
-  console.log(width, height);
 
   setInterval(() => {
     ctx.drawImage(video, 0, 0, width, height);
@@ -70,14 +69,13 @@ function paintToCanvas() {
 
     // put them back
     ctx.putImageData(pixels, 0, 0);
-  }, 10);
+  }, 50);
 }
 
 function takePhoto() {
   // play snap sound
   snap.currentTime = 0;
   snap.play();
-  console.log('Say Cheese!');
 
   // take the data from the canvas
   const data = canvas.toDataURL('image/jpeg');
@@ -88,7 +86,6 @@ function takePhoto() {
   link.textContent = 'Download Image';
   link.classList.add('link');
   strip.insertBefore(link, strip.firstChild);
-  // console.log(data);
 }
 
 function redEffect(pixels) {
@@ -116,12 +113,11 @@ function greenScreen(pixels) {
     levels[input.name] = input.value;
   });
 
-  for (i = 0; i < pixels.data.length; i = i + 4) {
+  for (i = 0; i < pixels.data.length; i += 4) {
     red = pixels.data[i + 0];
     green = pixels.data[i + 1];
     blue = pixels.data[i + 2];
     alpha = pixels.data[i + 3];
-    // console.log(red, green, blue, alpha);
 
     if (
       red >= levels.rmin &&
