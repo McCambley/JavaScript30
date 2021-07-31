@@ -1,5 +1,3 @@
-console.info('Hello, World!');
-
 const speech = document.querySelector('.speech');
 let utterance = document.querySelector('.utterance');
 let sender = false;
@@ -10,8 +8,6 @@ window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogn
 const recognition = new SpeechRecognition();
 recognition.interimResults = true;
 recognition.start();
-
-// console.log(recognition);
 
 let newUtterance = document.createElement('p');
 newUtterance.classList.add('utterance');
@@ -33,7 +29,6 @@ recognition.addEventListener('result', e => {
 
   if (e.results[0].isFinal) {
     sender = !sender;
-    console.log(sender);
     const now = new Date();
 
     newUtterance = document.createElement('p');
@@ -48,7 +43,6 @@ recognition.addEventListener('result', e => {
 
     speech.scrollTop = speech.scrollHeight;
   }
-  console.log(transcript);
 });
 
 recognition.addEventListener('end', recognition.start);
