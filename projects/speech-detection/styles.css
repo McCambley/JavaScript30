@@ -72,7 +72,9 @@ html {
   /* width: 100%; */
   max-width: 400px;
   align-self: flex-end;
-  background-color: blue;
+  background: linear-gradient(180deg, rgba(95, 201, 248, 1) 0%, rgba(20, 126, 251, 6) 100%);
+  background: linear-gradient(180deg, rgba(95, 201, 248, 0.7301295518207283) 0%, rgba(95, 201, 248, 1) 100%);
+  background: linear-gradient(180deg, rgba(20, 126, 251, 0.7) 0%, rgba(20, 126, 251, 1) 100%);
   padding: 10px 12px;
   border-radius: 15px;
   line-height: 1.3em;
@@ -81,7 +83,7 @@ html {
 
 .utterance:nth-of-type(4n + 3) {
   color: black;
-  background-color: rgb(192, 192, 192);
+  background: rgb(192, 192, 192);
   align-self: flex-start;
   text-align: left;
 }
@@ -100,6 +102,7 @@ html {
   opacity: 0.3;
   width: 100%;
   padding: 0 10px 0 0;
+  box-sizing: border-box;
 }
 
 .data:nth-of-type(4n + 4) {

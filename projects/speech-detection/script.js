@@ -2,7 +2,6 @@ const speech = document.querySelector('.speech');
 let utterance = document.querySelector('.utterance');
 let sender = false;
 
-// speech.textContent = '';
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
 const recognition = new SpeechRecognition();
