@@ -23,8 +23,8 @@ recognition.addEventListener('result', e => {
     .map(result => result[0])
     .map(result => result.transcript)
     .join('');
-
-  newUtterance.textContent = transcript;
+  console.log(capitalize(transcript));
+  newUtterance.textContent = capitalize(transcript);
 
   if (e.results[0].isFinal) {
     sender = !sender;
@@ -43,5 +43,10 @@ recognition.addEventListener('result', e => {
     speech.scrollTop = speech.scrollHeight;
   }
 });
+
+function capitalize(string) {
+  // console.log(string);
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 recognition.addEventListener('end', recognition.start);
