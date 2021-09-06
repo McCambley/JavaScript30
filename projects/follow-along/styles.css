@@ -66,10 +66,15 @@ html {
 }
 
 .menu__link {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   text-decoration: none;
   color: #242424;
+  transition: text-shadow 0.3s ease 0.15s;
+}
+
+.menu__link:hover {
+  text-shadow: 2px 2px 0px #ff66005e;
 }
 
 .content {
@@ -87,6 +92,17 @@ html {
   text-decoration: none;
   color: inherit;
   font-weight: 700;
+}
+
+.highlight {
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  z-index: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .overlay {
