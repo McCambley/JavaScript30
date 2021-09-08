@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="./images/favicons/site.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Speech Synthesis</title>
+  </head>
+
+  <body class="page">
+    <div class="voice">
+      <h1 class="voice__title">VoiceBox</h1>
+      <select name="voice" id="voices" class="voice__select">
+        <option value="">Select a Voice</option>
+      </select>
+
+      <label for="rate" class="voice__label">Rate</label>
+      <input type="range" name="rate" min="0" max="3" value="1" step=".1" class="voice__range" />
+
+      <label for="pitch" class="voice__label">Pitch</label>
+      <input type="range" name="pitch" min="0" max="2" step=".1" class="voice__range" />
+
+      <textarea class="voice__text" name="text">
+Push me, and then just touch me, till I can get my, coding action</textarea
+      >
+
+      <div class="voice__buttons">
+        <button type="button " id="speak" class="voice__button voice__button_go">Speak</button>
+        <button type="button " id="stop" class="voice__button voice__button_stop">Stop</button>
+      </div>
+    </div>
+    <!-- <div class="overlay">
+    <h1 class="header">This project is best viewed on a Desktop</h1>
+  </div> -->
+    <a href="../../" class="back-button" aria-label="Back button"></a>
+    <script src="./script.js"></script>
+  </body>
+</html>
