@@ -21,8 +21,6 @@ function populateVoices() {
 }
 
 function setVoice() {
-  //
-  console.log(voices)
   message.voice = voices.find((voice) => voice.name === this.value)
   toggle()
 }
@@ -35,7 +33,6 @@ function toggle(startOver = true) {
 }
 
 function setOption() {
-  console.log(this.name, this.value)
   message[this.name] = this.value
   toggle()
 }
@@ -48,12 +45,3 @@ stopButton.addEventListener('click', () => toggle(false))
 speakButton.addEventListener('click', toggle)
 
 options.forEach((option) => option.addEventListener('change', setOption))
-
-// window.addEventListener('keydown', (evt) => {
-//   if (evt.key === 'Enter') {
-//     // toggle()
-//     message.text = document.querySelector('.voice__text').value
-
-//     speakButton.click()
-//   }
-// })
