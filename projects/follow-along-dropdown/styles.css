@@ -3,6 +3,10 @@
 
 @import url(../../images/back-button/back-button.css);
 
+* {
+  border: 1px solid red;
+}
+
 html {
   box-sizing: border-box;
   margin: 0;
@@ -78,12 +82,134 @@ html {
   text-shadow: 2px 2px 0px #ff66005e;
 }
 
+.menu__dropdown-container {
+  position: relative;
+}
+
+.dropdown {
+  /*  */
+  display: grid;
+  position: absolute;
+  left: 50%;
+  top: 2.5em;
+  transform: translate(-50%);
+  padding: 12px;
+}
+
+.dropdown__about {
+  /*  */
+  grid-template-columns: 1fr 4fr;
+  gap: 12px;
+  width: 400px;
+}
+
+.dropdown__about-image {
+  /*  */
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  justify-self: center;
+  align-self: center;
+}
+
+.dropdown__about-text {
+  /*  */
+  margin: 0;
+  color: #000;
+}
+
+.dropdown__projects {
+  /*  */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+}
+
+.dropdown__projects-link {
+  /*  */
+  text-decoration: none;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dropdown__projects-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown__contact {
+  /*  */
+  display: grid;
+  gap: 4px;
+  grid-template-areas:
+    'linkedin linkedin'
+    'github twitter'
+    'medium spotify';
+}
+
+.dropdown__contact-link {
+  /*  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 16px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 500;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dropdown__contact-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+.dropdown__contact-link_linkedin {
+  /*  */
+  grid-area: linkedin;
+  background-color: #0e76a8;
+}
+
+.dropdown__contact-link_github {
+  /*  */
+  grid-area: github;
+  background-color: #333;
+}
+
+.dropdown__contact-link_twitter {
+  /*  */
+  grid-area: twitter;
+  background-color: #00acee;
+}
+
+.dropdown__contact-link_medium {
+  /*  */
+  grid-area: medium;
+  background-color: #000;
+}
+
+.dropdown__contact-link_spotify {
+  /*  */
+  grid-area: spotify;
+  background-color: #1db954;
+}
+
 .content {
   z-index: 0;
   backdrop-filter: blur(10px);
   padding: 16px;
   box-sizing: border-box;
   background-color: rgba(247, 187, 216, 0.4);
+  display: none;
 }
 
 .content__paragraph {
@@ -174,4 +300,8 @@ html {
   .canvas {
     display: none;
   }
+}
+
+.hide {
+  display: none;
 }
