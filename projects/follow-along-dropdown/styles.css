@@ -3,14 +3,14 @@
 
 @import url(../../images/back-button/back-button.css);
 
-* {
+/* * {
   border: 1px solid red;
-}
+} */
 
-html {
+/* html {
   box-sizing: border-box;
   margin: 0;
-}
+} */
 
 .page {
   display: flex;
@@ -84,16 +84,31 @@ html {
 
 .menu__dropdown-container {
   position: relative;
+  padding: 4px 8px;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  /* box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); */
+  border-radius: 4px;
 }
 
 .dropdown {
   /*  */
-  display: grid;
+  display: none;
   position: absolute;
   left: 50%;
   top: 2.5em;
   transform: translate(-50%);
   padding: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.menu__dropdown-container_enter .dropdown {
+  display: grid;
+}
+
+.menu__dropdown-container_show .dropdown {
+  opacity: 1;
 }
 
 .dropdown__about {
@@ -122,7 +137,7 @@ html {
 
 .dropdown__projects {
   /*  */
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 1fr;
   gap: 4px;
 }
@@ -148,7 +163,7 @@ html {
 
 .dropdown__contact {
   /*  */
-  display: grid;
+  /* display: grid; */
   gap: 4px;
   grid-template-areas:
     'linkedin linkedin'
@@ -227,8 +242,8 @@ html {
 
 .highlight {
   /* background-color: #fff; */
-  display: none;
-  border-radius: 10px;
+  opacity: 0;
+  border-radius: 4px;
   transition: all 0.3s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -236,6 +251,10 @@ html {
   left: 0;
   background-color: rgba(255, 255, 255, 0.6);
   z-index: 10;
+}
+
+.highlight_show {
+  opacity: 1;
 }
 
 .highlight__arrow {
@@ -247,7 +266,8 @@ html {
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 8px solid rgba(255, 255, 255, 0.6);
+  border-bottom: 8px solid rgba(255, 255, 255, 0.7);
+  filter: blur(10px);
   z-index: 5;
 }
 
