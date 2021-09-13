@@ -5,9 +5,25 @@ const nav = document.querySelector('.menu')
 function handleEnter() {
   this.classList.add('menu__dropdown-container_enter')
   setTimeout(() => {
-    this.classList.add('menu__dropdown-container_show')
+    this.classList.contains('menu__dropdown-container_enter') && this.classList.add('menu__dropdown-container_show')
   }, 150)
   dropdownBackground.classList.add('highlight_show')
+
+  const dropdown = this.querySelector('.dropdown')
+  const dropdownCoords = dropdown.getBoundingClientRect()
+  // const navCoords = nav.getBoundingClientRect()
+
+  const coords = {
+    height: dropdownCoords.height,
+    width: dropdownCoords.width,
+    left: dropdownCoords.left,
+    top: dropdownCoords.top,
+  }
+
+  // dropdownBackground.style.width = ('width')
+  dropdownBackground.style.width = `${coords.width}px`
+  dropdownBackground.style.height = `${coords.height}px`
+  dropdownBackground.style.transform = `translate(${coords.left}px, ${coords.top}px)`
 }
 
 function handleLeave() {
@@ -15,6 +31,7 @@ function handleLeave() {
   setTimeout(() => {
     this.classList.remove('menu__dropdown-container_enter')
   }, 150)
+  dropdownBackground.classList.remove('highlight_show')
 }
 
 triggers.forEach((item) => item.addEventListener('mouseenter', handleEnter))
