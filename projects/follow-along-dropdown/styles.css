@@ -3,15 +3,6 @@
 
 @import url(../../images/back-button/back-button.css);
 
-/* * {
-  border: 1px solid red;
-} */
-
-/* html {
-  box-sizing: border-box;
-  margin: 0;
-} */
-
 .page {
   display: flex;
   flex-direction: column;
@@ -49,9 +40,7 @@
   z-index: 1;
   text-shadow: 4px 4px 0 rgb(111, 187, 231);
 }
-/* * {
-  border: 1px solid red;
-} */
+
 .menu {
   width: 75%;
   display: flex;
@@ -79,7 +68,6 @@
   padding: 4px 8px;
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4px);
-  /* box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); */
   border-radius: 4px;
   box-sizing: border-box;
   display: block;
@@ -96,7 +84,6 @@
 }
 
 .dropdown {
-  /*  */
   display: none;
   position: absolute;
   left: 50%;
@@ -104,7 +91,7 @@
   transform: translate(-50%);
   padding: 12px;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease 0.05s;
 }
 
 .menu__dropdown-container_enter .dropdown {
@@ -116,14 +103,12 @@
 }
 
 .dropdown__about {
-  /*  */
   grid-template-columns: 1fr 4fr;
   gap: 12px;
   width: 400px;
 }
 
 .dropdown__about-image {
-  /*  */
   border-radius: 50%;
   height: 100px;
   width: 100px;
@@ -134,20 +119,16 @@
 }
 
 .dropdown__about-text {
-  /*  */
   margin: 0;
   color: #000;
 }
 
 .dropdown__projects {
-  /*  */
-  /* display: grid; */
   grid-template-columns: 1fr;
   gap: 4px;
 }
 
 .dropdown__projects-link {
-  /*  */
   text-decoration: none;
   width: 100px;
   display: flex;
@@ -162,12 +143,10 @@
 
 .dropdown__projects-link:hover {
   transform: translateY(-1px);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown__contact {
-  /*  */
-  /* display: grid; */
   gap: 4px;
   grid-template-areas:
     'linkedin linkedin'
@@ -176,7 +155,6 @@
 }
 
 .dropdown__contact-link {
-  /*  */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,34 +168,29 @@
 
 .dropdown__contact-link:hover {
   transform: translateY(-1px);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 .dropdown__contact-link_linkedin {
-  /*  */
   grid-area: linkedin;
   background-color: #0e76a8;
 }
 
 .dropdown__contact-link_github {
-  /*  */
   grid-area: github;
   background-color: #333;
 }
 
 .dropdown__contact-link_twitter {
-  /*  */
   grid-area: twitter;
   background-color: #00acee;
 }
 
 .dropdown__contact-link_medium {
-  /*  */
   grid-area: medium;
   background-color: #000;
 }
 
 .dropdown__contact-link_spotify {
-  /*  */
   grid-area: spotify;
   background-color: #1db954;
 }
@@ -228,7 +201,6 @@
   padding: 16px;
   box-sizing: border-box;
   background-color: rgba(247, 187, 216, 0.4);
-  /* display: none; */
 }
 
 .content__paragraph {
@@ -244,9 +216,7 @@
   font-weight: 700;
 }
 
-/* white box */
 .highlight {
-  /* background-color: #fff; */
   opacity: 0;
   border-radius: 8px;
   transition: all 0.3s ease;
