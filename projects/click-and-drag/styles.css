@@ -52,6 +52,18 @@ html {
   border-radius: 10px;
   width: 75%;
   overflow: scroll;
+  backdrop-filter: blur(10px);
+  position: relative;
+  transition: transform 0.1s ease, background-color 0.1s ease;
+  cursor: grab;
+  user-select: none;
+  transform: scale(0.99);
+}
+
+.cards_active {
+  transform: scale(1);
+  background-color: #ffffff2d;
+  cursor: grabbing;
   backdrop-filter: blur(20px);
 }
 
