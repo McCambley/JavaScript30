@@ -55,6 +55,7 @@ html {
   /*  */
   margin: 0;
   font-size: 96px;
+  min-height: 1em;
 }
 
 .content__termination {
@@ -63,6 +64,7 @@ html {
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 28px;
+  min-height: 1em;
 }
 
 .content__options {
@@ -80,13 +82,13 @@ html {
   color: #fff;
   padding: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+  transition: background-color 0.15s ease, border 0.15s ease;
   backdrop-filter: blur(2px);
 }
 
 .content__button:hover {
   background-color: rgba(128, 128, 128, 0.6);
-  transform: scale(1.03);
+  border: 2px solid #fff;
 }
 
 .content__form {
@@ -102,7 +104,7 @@ html {
   border-radius: 8px;
   border: 2px solid gray;
   padding: 8px;
-  transition: border 0.1s ease;
+  transition: border 0.15s ease;
   backdrop-filter: blur(2px);
 }
 

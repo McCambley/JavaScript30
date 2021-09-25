@@ -14,16 +14,16 @@
 
   <body class="page">
     <div class="content">
-      <h1 class="content__countdown">12:00</h1>
-      <h2 class="content__termination">12:00</h2>
+      <h1 class="content__countdown">00:00</h1>
+      <h2 class="content__termination">Select time...</h2>
       <div class="content__options">
-        <button class="content__button">5min.</button>
-        <button class="content__button">10min.</button>
-        <button class="content__button">15min.</button>
-        <button class="content__button">20min.</button>
-        <button class="content__button">25min.</button>
+        <button data-time="300" class="content__button">5min.</button>
+        <button data-time="600" class="content__button">10min.</button>
+        <button data-time="900" class="content__button">15min.</button>
+        <button data-time="1800" class="content__button">30min.</button>
+        <button data-time="3600" class="content__button">60min.</button>
         <form action="countdown" name="countdown" class="content__form">
-          <input type="text" class="content__input" placeholder="Custom" />
+          <input type="text" class="content__input" name="minutes" placeholder="Custom" />
         </form>
       </div>
     </div>
