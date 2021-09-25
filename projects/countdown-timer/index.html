@@ -14,8 +14,10 @@
 
   <body class="page">
     <div class="content">
-      <h1 class="content__countdown">00:00</h1>
-      <h2 class="content__termination">Select time...</h2>
+      <div class="content__time-display">
+        <h1 class="content__countdown">00:00</h1>
+        <h2 class="content__termination">Select time...</h2>
+      </div>
       <div class="content__options">
         <button data-time="300" class="content__button">5min.</button>
         <button data-time="600" class="content__button">10min.</button>
@@ -25,6 +27,9 @@
         <form action="countdown" name="countdown" class="content__form">
           <input type="text" class="content__input" name="minutes" placeholder="Custom" />
         </form>
+      </div>
+      <div class="content__reset hide">
+        <button class="content__reset-button">Reset</button>
       </div>
     </div>
     <!-- <div class="overlay">
