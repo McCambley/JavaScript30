@@ -4,6 +4,22 @@
 
 # [Projects](https://mccambley.github.io/JSPlayground/)
 
+## Personal Favorites
+
+### [🎛 Drum kit](https://mccambley.github.io/JSPlayground/drum-kit/index.html)
+
+### [🔐 Local Storage and Event Delegations](https://mccambley.github.io/JSPlayground/local-storage/)
+
+### [🗣 Speech Detection](https://mccambley.github.io/JSPlayground/projects/speech-detection/)
+
+### [⏳ Countdown Timer](https://mccambley.github.io/JSPlayground/projects/countdown-timer/)
+
+### [🎯 Target Striker](https://mccambley.github.io/JSPlayground/projects/targets/)
+
+---
+
+## All Projects
+
 ### [🎛 Drum kit](https://mccambley.github.io/JSPlayground/drum-kit/index.html)
 
 - An exploration of using keypress event listeners to affect audio playback
@@ -56,20 +72,69 @@
 
 - Listen for scroll events and display photos only when they appear in the window. This project features a popup that lets users view an expanded version of each photo as well.
 
+### [📜 Javascript References](https://mccambley.github.io/JSPlayground/projects/objects-and-arrays/)
+
+- Use a reduce function to calculate the total time left in a video series.
+
 ### [🔐 Local Storage and Event Delegations](https://mccambley.github.io/JSPlayground/local-storage/)
 
 - Create a list of menu items that will remain in their added and checked/unchecked state on page refresh. Also, use event delegation to target specific menu items on click in order to set certain Local Storage variable values.
 
-- What's next is to implement a clear button that will reset the menu, the local storage, and the innerHTML of the plates list
+- What's next is to implement a clear button that will reset the menu, the local storage, and the innerHTML of the plates list.
 
 - This project will be especially useful in maintaining a "dark mode" state on page refresh on a separate project, my personal portfolio.
 
+### [🐭 Mouse Move Shadow](https://mccambley.github.io/JSPlayground/projects/mouse-move-shadow/)
+
+- Capture moment to moment location data from the mousemove event in order to create a fancy text shadow that moves with the mouse.
+
+### [🗞 Sort Without Articles](https://mccambley.github.io/JSPlayground/projects/sort-without-articles/)
+
+- Sort a list of bandnames without articles using an assortment of array methods and regular expressions.
+
+### [⏰ Adding Up Times with Reduce](https://mccambley.github.io/JSPlayground/projects/add-times/)
+
+- Use a reduce function to calculate the total time left in a video series.
+
+### [📸 Webcam Fun](https://mccambley.github.io/JSPlayground/projects/webcam-fun/)
+
+- Returning to practice in the console except this time we're working with objects and object references.
+
+### [🗣 Speech Detection](https://mccambley.github.io/JSPlayground/projects/speech-detection/)
+
+- Use the speech recognition Api to capture speech from users and render words into a chat message
+
+### [👣 Follow Along Link Highlighter](https://mccambley.github.io/JSPlayground/projects/follow-along/)
+
+- The beginnings of a stripe menu reconstruction, we'll build a travelling highlight box that will follow the mouse and appear behind certain words in order to add emphasis.
+
+### [🎙 Speech Synthesis](https://mccambley.github.io/JSPlayground/projects/speech-synthesis/)
+
+- Whereas previosuly we were capturing voice, now we're utilizing the SpeechSynthesis Api to generate voice based on text.
+- Users may alter the speaker, speed, pitch, and content of the voice
+
+### [⬇️ Follow Along Menu](https://mccambley.github.io/JSPlayground/projects/follow-along-dropdown/)
+
+- The full reproduction of the Stripe Menu. This project features a moving navbar that will populate with content depending on what nav link is currently in focus.
+
+### [⚓️ Click and Drag](https://mccambley.github.io/JSPlayground/projects/click-and-drag/)
+
+- Mimicking touchscreen scrolling, this project augments a users ability to scroll horizontally in an overflowing container and allows them to drag the content to a new position by clicking and holding the mouse down.
+
+### [📽 Video Speed Controller](https://mccambley.github.io/JSPlayground/projects/video-speed-control/)
+
+- The project features a fancy custom slider input which can adjust the speed of an adjacent video.
+- When the video speed changes, the text content of the slider will adjsut accordingly.
+
+### [⏳ Countdown Timer](https://mccambley.github.io/JSPlayground/projects/countdown-timer/)
+
+- A rather useful project, this project is a simple yet powerful timer which provides default and custom options for coundowns. When the timer is complete, a success tone plays and a success image is displayed.
+
+### [🎯 Target Striker](https://mccambley.github.io/JSPlayground/projects/targets/)
+
+- A fun game similar to whack-a-mole in which a user can choose their preferred difficulty then see how many moving targets they can catch before their ten seconds are up.
+
 ---
-
-### To-do
-
-- So many projects!
-- Add a link box in the bottom of the homepage
 
 ## Based on the [#Javascript30](https://javascript30.com/) course by [Wes Bos](https://twitter.com/wesbos?s=20).
 
