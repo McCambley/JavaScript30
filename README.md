@@ -128,7 +128,7 @@
 
 ### [⏳ Countdown Timer](https://mccambley.github.io/JSPlayground/projects/countdown-timer/)
 
-- A rather useful project, this project is a simple yet powerful timer which provides default and custom options for coundowns. When the timer is complete, a success tone plays and a success image is displayed.
+- A rather useful project, this project is a simple yet powerful timer which provides default and custom options for countdowns. When the timer is complete, a success image is displayed.
 
 ### [🎯 Target Striker](https://mccambley.github.io/JSPlayground/projects/targets/)
 
