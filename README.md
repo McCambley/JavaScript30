@@ -6,9 +6,9 @@
 
 ## Personal Favorites
 
-### [🎛 Drum kit](https://mccambley.github.io/JSPlayground/drum-kit/index.html)
+### [🎛 Drum kit](https://mccambley.github.io/JSPlayground/projects/drum-kit/)
 
-### [🔐 Local Storage and Event Delegations](https://mccambley.github.io/JSPlayground/local-storage/)
+### [🔐 Local Storage and Event Delegations](https://mccambley.github.io/JSPlayground/projects/local-storage/)
 
 ### [🗣 Speech Detection](https://mccambley.github.io/JSPlayground/projects/speech-detection/)
 
@@ -26,7 +26,7 @@
 
 ### [🕐 Clock](https://mccambley.github.io/JSPlayground/projects/clock/index.html)
 
-- Utilizing the Date() function to update the rotational position of lines on a page in order to make a functional clock.
+- Utilizing the Date() function to update the rotational position of lines on a page in order to make a functional clock.liv
 
 ### [📍 CSS Variables in Javascript](https://mccambley.github.io/JSPlayground/projects/variables/index.html)
 
