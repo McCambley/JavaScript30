@@ -1,6 +1,8 @@
-# JS Dreamland
+# [JavaScript 30](https://mccambley.github.io/JSPlayground/)
 
-## A project comprised of some littler projects, all geared towards practicing front-end development with Javascript.
+This project is a collection of smaller projects built with the intention of learning the intricacies and capabilities of vanilla javascript prior to embarking on the journey of React. These projects also provided and oppurtunity to dive into UX/UI, as all twenty-seven projects include original designs
+
+### Check out a live demonstration of this project [here](https://youtu.be/8z9hugvI4-U)
 
 # [Projects](https://mccambley.github.io/JSPlayground/)
 
