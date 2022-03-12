@@ -1,0 +1,23 @@
+{
+  "name": "jsplayground",
+  "version": "1.0.0",
+  "description": "A playground to practice all sorts of JS features",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc": "jsdoc -c jsdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/McCambley/JSPlayground.git"
+  },
+  "author": "Jake McCambley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/McCambley/JSPlayground/issues"
+  },
+  "homepage": "https://github.com/McCambley/JSPlayground#readme",
+  "devDependencies": {
+    "jsdoc": "^3.6.10"
+  }
+}
