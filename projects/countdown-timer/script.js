@@ -6,6 +6,7 @@ const stop = document.querySelector('.content__reset');
 const endTime = document.querySelector('.content__termination');
 const buttons = document.querySelectorAll('.content__button');
 const resetButton = document.querySelector('.content__reset-button');
+const sound = document.getElementById('sound');
 
 function timer(seconds) {
   clearInterval(countdown);
@@ -26,6 +27,7 @@ function timer(seconds) {
       timerDisplay.textContent = '🎉';
       endTime.textContent = 'Done!';
       document.title = 'Done!';
+      sound.play();
     }
   }, 1000);
 }
